@@ -5,11 +5,12 @@ export default function PotionCard({potion}) {
     let colors = Object.keys(recipe);
 
     return (
-        <div className={'potion potion-' + ability}>
+        <div className="potion">
             <span className="point-value">{value}</span>
+            <div className={'potion-' + ability} />
             <ul className={colors.length + '-color colors'}>
                 {colors.map(color => (
-                    <li className={`rx-${color} unfilled-${recipe[color]}`} />
+                    <li key={color} className={`rx-${color} unfilled-${recipe[color]}`} />
                 ))}
             </ul>
         </div>
