@@ -90,6 +90,7 @@ const newGame = (arr, players, logState = false) => {
     if (!logState) {
         return createPotionStacks(arr, players);
     }
+
     let state = createPotionStacks(arr, players);
     console.log('YOUR STARTING ' + state[0].length + ' POTIONS ARE: ', state[0]);
     console.log('THE ' + state[1].length + ' POTION STACKS ARE:');

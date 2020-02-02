@@ -9,7 +9,7 @@ export default function PotionCard({potion}) {
             <span className="point-value">{value}</span>
             <ul className={colors.length + '-color colors'}>
                 {colors.map(color => (
-                    <li className={`rx-${color} ${recipe[color]}-unfilled`} />
+                    <li className={`rx-${color} unfilled-${recipe[color]}`} />
                 ))}
             </ul>
         </div>
