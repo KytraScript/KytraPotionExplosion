@@ -35,10 +35,11 @@ class App extends React.Component {
                 <Switch>
                     <Route exact path="/">
                         <StartPage pots={starters} />
-                        <Link to="/stacks">Next -></Link>
+                        <Link to="/stacks">Potion Stacks -></Link>
                     </Route>
                     <Route path="/stacks">
                         <StacksPage stacks={stacks} handleClick={this.takePotion.bind(this)}/>
+                        <Link to="/">&lt;- Starters</Link>
                     </Route>
                 </Switch>
             </HashRouter>
