@@ -1,4 +1,4 @@
-let potions = [
+const potions = [
     {
         type: 'Sands of Time',
         value: '3',
@@ -736,6 +736,8 @@ let potions = [
         abilityDesc: 'Discard up to 5 Ingredients of 1 color from the same slide track of the Dispenser back into the tank. No Explosions are triggered.'
     },
 ];
+
+module.exports = potions;
 
 
 
