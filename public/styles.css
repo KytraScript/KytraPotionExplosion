@@ -45,12 +45,11 @@ body {
     background-color: #272d36
 }
 
-
-
 .potion {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
     margin-right: 10px;
     border: 1px solid black;
     height: 160px;
@@ -58,6 +57,7 @@ body {
 }
 
 .point-value{
+    z-index: 10;
     text-align: center;
     color: white;
     padding-top: 10px;
@@ -67,4 +67,84 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url('./img/greyRibbon.png');
+}
+
+.potion-contiguous{
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: green;
+}
+
+.potion-replay{
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: tan;
+}
+
+.potion-magnetism{
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: darkgray;
+}
+
+.potion-wisdom{
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: mediumpurple;
+}
+
+.potion-rainbow{
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: hotpink;
+}
+
+.potion-steal{
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: crimson;
+}
+
+.potion-draft{
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: deepskyblue;
+}
+
+.potion-lavamancing{
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: orange;
 }
