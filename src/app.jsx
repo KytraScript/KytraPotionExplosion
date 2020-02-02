@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {BrowserRouter as Router, Route, Switch, useParams, Link, Redirect} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch, HashRouter, useParams, Link, Redirect} from "react-router-dom";
 import newGame from '../Logic/newGameLogic';
 import potions from '../Logic/potions';
 import StartPage from "./components/StartPage.jsx";
@@ -22,20 +22,26 @@ class App extends React.Component {
 
     }
 
+    takePotion(idx){
+        this.state.stacks[idx].pop();
+        this.setState(this.state);
+    }
+
     render() {
         const {starters, stacks} = this.state;
 
         return (
-            <Router>
+            <HashRouter basename="/">
                 <Switch>
-                    <Route path="/">
+                    <Route exact path="/">
                         <StartPage pots={starters} />
+                        <Link to="/stacks">Next -></Link>
                     </Route>
                     <Route path="/stacks">
-                        <StacksPage stacks={stacks} />
+                        <StacksPage stacks={stacks} handleClick={this.takePotion.bind(this)}/>
                     </Route>
                 </Switch>
-            </Router>
+            </HashRouter>
         )
     }
 }
