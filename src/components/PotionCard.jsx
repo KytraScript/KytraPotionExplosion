@@ -11,7 +11,9 @@ export default function PotionCard({potion}) {
             <div className={'topper-' + ability} />
             <ul className={colors.length + '-color colors'}>
                 {colors.map(color => (
-                    <li key={color} className={`rx-${color} unfilled-${recipe[color]}`} />
+                    <li key={color} className={`rx-${color} size-${recipe[color]}`}>
+                        <span className={`unfilled-${recipe[color]}`}/>
+                    </li>
                 ))}
             </ul>
         </div>

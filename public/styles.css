@@ -2,24 +2,73 @@ body {
     margin: 0;
 }
 
+.container-col{
+    display: flex;
+    flex-direction: column;
+}
+
 .starters{
     display: flex;
     flex-direction: row;
+    padding: 0;
 }
 
 .starters li{
     list-style-type: none;
+    position: relative;
 }
 
 .stack li{
     width: 100%;
-    height: 70px;
+    position: relative;
 }
 
 .stack ul{
     padding: 0;
     list-style-type: none;
 }
+
+.potion ul{
+    margin: 0;
+}
+
+.stacks-row{
+    display: flex;
+    width: 1380px;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: space-evenly;
+    padding : 10px 0 10px 0;
+}
+
+.status-row{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 1380px;
+    border: 1px solid black;
+    padding : 10px 0 10px 0;
+}
+
+.last-chosen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 14px;
+    height: 360px;
+    width:  300px;
+    padding: 6px;
+    border: 1px solid black;
+    box-shadow: inset 0 0 3px #222;
+    border-radius: 4px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.last-chosen .potion{
+    margin: 0;
+}
+
 
 .rx-red{
     display: flex;
@@ -50,8 +99,10 @@ body {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    margin-right: 20px;
+    margin-right: 14px;
+    background-color: #e5edf4;
     border: 2px solid #272d36;
+    box-shadow: 1px 1px 3px #222;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     height: 320px;
@@ -68,8 +119,8 @@ body {
     -webkit-text-stroke: 1px black;
     text-align: center;
     color: white;
-    padding-top: 20px;
-    width: 50px;
+    padding-top: 16px;
+    width: 44px;
     height: 76px;
     filter: drop-shadow(0 0 3px #222);
     background-size: contain;
@@ -84,6 +135,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    filter: opacity(.8);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     border-bottom: 1px solid black;
@@ -99,6 +151,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    filter: opacity(.8);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     border-bottom: 1px solid black;
@@ -114,6 +167,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    filter: opacity(.8);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     border-bottom: 1px solid black;
@@ -129,6 +183,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    filter: opacity(.8);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     border-bottom: 1px solid black;
@@ -144,6 +199,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    filter: opacity(.8);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     border-bottom: 1px solid black;
@@ -159,6 +215,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    filter: opacity(.8);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     border-bottom: 1px solid black;
@@ -174,6 +231,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    filter: opacity(.8);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     border-bottom: 1px solid black;
@@ -189,6 +247,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    filter: opacity(.8);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     border-bottom: 1px solid black;
@@ -204,7 +263,7 @@ body {
     position: absolute;
     top: 5px;
     right: 5px;
-    filter: drop-shadow(0 0 6px #222);
+    filter: drop-shadow(2px 2px 5px #222);
     background-image: url('./img/topperBalm.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -217,7 +276,7 @@ body {
     position: absolute;
     top: 5px;
     right: 5px;
-    filter: drop-shadow(0 0 6px #222);
+    filter: drop-shadow(2px 2px 5px #222);
     background-image: url('./img/topperWisdom.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -230,7 +289,7 @@ body {
     position: absolute;
     top: 5px;
     right: 5px;
-    filter: drop-shadow(0 0 6px #222);
+    filter: drop-shadow(2px 2px 5px #222);
     background-image: url('./img/topperSand.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -243,7 +302,7 @@ body {
     position: absolute;
     top: 5px;
     right: 5px;
-    filter: drop-shadow(0 0 6px #222);
+    filter: drop-shadow(2px 2px 5px #222);
     background-image: url('./img/topperMagnet.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -256,7 +315,7 @@ body {
     position: absolute;
     top: 5px;
     right: 5px;
-    filter: drop-shadow(0 0 6px #222);
+    filter: drop-shadow(2px 2px 5px #222);
     background-image: url('./img/topperLava.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -269,7 +328,7 @@ body {
     position: absolute;
     top: 5px;
     right: 5px;
-    filter: drop-shadow(0 0 6px #222);
+    filter: drop-shadow(2px 2px 5px #222);
     background-image: url('./img/topperLove.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -282,7 +341,7 @@ body {
     position: absolute;
     top: 5px;
     right: 5px;
-    filter: drop-shadow(0 0 6px #222);
+    filter: drop-shadow(2px 2px 5px #222);
     background-image: url('./img/topperDraft.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -295,8 +354,72 @@ body {
     position: absolute;
     top: 5px;
     right: 5px;
-    filter: drop-shadow(0 0 6px #222);
+    filter: drop-shadow(2px 2px 5px #222);
     background-image: url('./img/topperRainbow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.size-1{
+    height: 60px;
+}
+
+.size-2{
+    height: 60px;
+}
+
+.size-3{
+    height: 75px;
+}
+
+.size-4{
+    height: 85px;
+}
+
+.unfilled-1{
+    height: 60px;
+    width: 240px;
+    position:absolute;
+    z-index: 12;
+    top: 0;
+    left: 0;
+    background-image: url('./img/unfilled-1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.unfilled-2{
+    height: 60px;
+    width: 240px;
+    position:absolute;
+    z-index: 12;
+    top: 0;
+    left: 0;
+    background-image: url('./img/unfilled-2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.unfilled-3{
+    height: 75px;
+    width: 240px;
+    position:absolute;
+    z-index: 12;
+    top: 0;
+    left: 0;
+    background-image: url('./img/unfilled-3.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.unfilled-4{
+    height: 85px;
+    width: 240px;
+    position:absolute;
+    z-index: 12;
+    top: 0;
+    left: 0;
+    background-image: url('./img/unfilled-4-1.png');
     background-size: contain;
     background-repeat: no-repeat;
 }
